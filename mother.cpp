@@ -1,6 +1,25 @@
 
 
 #include <iostream>
+#include <string>
+
+std::string la{ '<' };
+
+std::string player() {
+    std::string playerNAME;
+    std::cin >> playerNAME;
+    return playerNAME;
+}
+
+void playerFormat() {
+    std::cout << "\n\n\n\n";
+    std::cout << "<<<<<<<<<<<<<<<<<<<<<<";
+//    std::cout 
+}
+
+void  coordinates() {
+    int x,y,z;
+}
 
 
 
@@ -17,7 +36,7 @@ void weeeener() {
 
 int main()
 {
-
+ //   std::cout << 
     weeeener();
 
     [[maybe_unused]] int maybeuse;
