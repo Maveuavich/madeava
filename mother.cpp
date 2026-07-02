@@ -1,4 +1,5 @@
 
+#include <iomanip>
 #include <cstdint>
 #include <iostream>
 #include <string>
@@ -31,6 +32,16 @@ void weeeener() {
 }
 
 int main() {
+
+    std::cerr << std::setprecision(69);
+
+    long double gayfig{ 1.24242424f };
+
+    std::cerr << gayfig << "\n\n\n\n\n\n";
+
+    std::int_fast64_t gayfag{ 64 };
+    std::cerr << gayfag << "\n\n\n\n\n";
+
     unsigned long long oogle{ 18446744073709551615 };
     std::cerr << oogle << "\n\n\n\n";
     oogle++;
