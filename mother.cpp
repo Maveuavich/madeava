@@ -4,16 +4,49 @@
 #include <iostream>
 #include <string>
 
-#define GAY_BOIII "68"
+const int BACK_RTURN{ 5 };
 
+const int PLAY_GAME{ 67 };
+const int EXIT_GAME{ 69 };
+const int RETURN_TO_MENUS{ 6769 };
+
+int MAIN_MENUS();
+
+int NEW_GAME_MENUS() {
+	std::string Player_Name;
+	std::cin >> Player_Name;
+}
+
+int GAME_FILE_MENUS() {
+	int user_Input;
+	std::cin >> user_Input;
+
+	if (user_Input == 1)
+		user_Input = NEW_GAME_MENUS();
+
+	if (user_Input == BACK_RTURN)
+		return RETURN_TO_MENUS;
+}
 
 int PLAY_MENUS() {
 	int user_Input;
+	std::cin >> user_Input;
 
 	if (user_Input == 1)
+		user_Input = GAME_FILE_MENUS();
+	if (user_Input == BACK_RTURN)
+		return RETURN_TO_MENUS;
 
-	if (user_Input == 3)
-		return user_Input;
+	if (user_Input == RETURN_TO_MENUS)
+		PLAY_MENUS();
+}
+
+int OPTIONS_MENUS() {
+	int user_Input;
+	std::cin >> user_Input;
+
+	if (user_Input == BACK_RTURN)
+		return RETURN_TO_MENUS;
 }
 
 void main_menusfor() {
@@ -22,28 +55,38 @@ void main_menusfor() {
 }
 
 int MAIN_MENUS() {
-//	main_menusfor();
+	main_menusfor();
+
 	int user_Input;
 	std::cin >> user_Input;
+
 	if (user_Input == 1)
+		user_Input = PLAY_MENUS();
 
+	if (user_Input == 2)
+		user_Input = OPTIONS_MENUS();
 
+	if (user_Input == RETURN_TO_MENUS)
+		MAIN_MENUS();
+	if (user_Input == PLAY_GAME)
+		return PLAY_GAME;
+	if (user_Input == BACK_RTURN)
+		return EXIT_GAME;
+}
 
-	return user_Input;
+int PLAY_STATE() {
+	return NULL;
 }
 
 int GAMESTATE() {
-	int user_Input;
-	user_Input = MAIN_MENUS();
 
-	// Play State
+	int STATE;
+	STATE = MAIN_MENUS();
 	
-	if (MAIN_MENUS() == 0)
-				PLAY_STATE();
-	if PLAY_MENUS()
-			
-	
-	return user_Input;
+	if (STATE == PLAY_GAME)
+		STATE = PLAY_STATE();
+	if (STATE == EXIT_GAME)
+		return EXIT_GAME;
 			
 
 }
