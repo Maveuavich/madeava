@@ -1,6 +1,4 @@
 
-#include <iomanip>
-#include <cstdint>
 #include <iostream>
 #include <string>
 
@@ -10,11 +8,47 @@ const int PLAY_GAME{ 67 };
 const int EXIT_GAME{ 69 };
 const int RETURN_TO_MENUS{ 6769 };
 
+void wo(std::string usainp) {
+	std::cerr << usainp;
+}
+
+void sa(int usainp) {
+	for (int form{ 0 }; form < usainp; ++form)
+		std::cerr << ' ';
+}
+
+void nl(int usainp) {
+	for (int form{ 0 }; form < usainp; ++form)
+		std::cerr << '\n';
+}
+
+void al(int usainp) {
+	for (int form{ 0 }; form < usainp; ++form)
+		std::cerr << '<';
+}
+
+void ar(int usainp) {
+	for (int form{ 0 }; form < usainp; ++form)
+		std::cerr << '>';
+}
+
+void da(int usainp) {
+	for (int form{ 0 }; form < usainp; ++form)
+		std::cerr << '-';
+}
+
+void PLAY_SELE() {
+	nl(5);
+	wo("Please select an option");
+	sa(4); ar(8); sa(5);
+}
+
 int MAIN_MENUS();
 
 int NEW_GAME_MENUS() {
 	std::string Player_Name;
 	std::cin >> Player_Name;
+	return 0;
 }
 
 int GAME_FILE_MENUS() {
@@ -50,7 +84,7 @@ int OPTIONS_MENUS() {
 }
 
 void main_menusfor() {
-	std::cerr << "main menus" << "\n\n\n\n" << ">>>>>>>>>" << "        " << "userinput >>" << "    ";
+	PLAY_SELE();
 	
 }
 
@@ -79,7 +113,8 @@ int PLAY_STATE() {
 }
 
 int GAMESTATE() {
-
+	wo("rummm urmmmmm");
+	nl(69);
 	int STATE;
 	STATE = MAIN_MENUS();
 	
