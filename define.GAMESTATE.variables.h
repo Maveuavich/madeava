@@ -1,4 +1,8 @@
 #pragma once
+
+void fileNewDir(std::string PLAYER_NAME);
+void fileLoadDIR();
+
 const int BACK_RTURN{ 5 };
 
 const int PLAY_GAME{ 67 };

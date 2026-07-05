@@ -1,9 +1,20 @@
-#include <fstream>
-#include <filesystem>
 #include <iostream>
+#include <filesystem>
+#include <fstream>
+
+#include "Form.h"
+
+void fileNewDir(std::string PLAYER_NAME) {
+    std::ofstream saveFILE("\\v.proj\\save files\\" + PLAYER_NAME);
+    
+    saveFILE << "PLAYER NAME:" << "\n\n" << PLAYER_NAME << "\n\n\n" << "PLAYER LEVEL :" << "\n\n" << "0" << "\n\n\n" << "PLAYER COORDINATES :" << "\n\n" << "x 0    y 0" << "\n\n\n" << "COMPANIONS:" << "\n\n\n" << "ITEMS:" <<  "\n\n";
+}
 
 void fileLoadDIR() {
-    std::string path = "/path/to/directory";
+    std::string path = "\\v.proj\\save files";
     for (const auto& entry : std::filesystem::directory_iterator(path))
-        wo(entry.path());
+    
+        std::cerr << entry;
+  //      std::cerr << entry.path();
+        
 }

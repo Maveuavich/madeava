@@ -4,12 +4,24 @@
 
 int MAIN_MENUS();
 
+void INGAME_PLAY_MENUS() {
+
+	int user_Input;
+	std::cin >> user_Input;
+	if (user_Input == 1)
+
+	if (user_Input == 2)
+
+	if (user_Input == 5)
+}
+
 int NEW_GAME_FILE_MENUS() {
 	newgame_menusfor();
 	std::string user_Input_player_name;
 	std::string PLAYER_NAME;
 	std::cin >> user_Input_player_name;
 	PLAYER_NAME = user_Input_player_name;
+	fileNewDir(PLAYER_NAME);
 	
 	if (user_Input_player_name == "5")
 		return RETURN_TO_MENUS;
@@ -17,6 +29,7 @@ int NEW_GAME_FILE_MENUS() {
 
 int LOAD_GAME_FILE_MENUS() {
 	loadgame_menusfor();
+	fileLoadDIR();
 	int user_Input;
 	std::cin >> user_Input;
 
