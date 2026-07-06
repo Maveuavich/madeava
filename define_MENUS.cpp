@@ -10,9 +10,10 @@ void INGAME_PLAY_MENUS() {
 	std::cin >> user_Input;
 	if (user_Input == 1)
 
-	if (user_Input == 2)
+		if (user_Input == 2)
 
-	if (user_Input == 5)
+			if (user_Input == 5)
+				std::cerr << "gae";
 }
 
 int NEW_GAME_FILE_MENUS() {
@@ -21,8 +22,9 @@ int NEW_GAME_FILE_MENUS() {
 	std::string PLAYER_NAME;
 	std::cin >> user_Input_player_name;
 	PLAYER_NAME = user_Input_player_name;
-	fileNewDir(PLAYER_NAME);
-	
+
+	if (user_Input_player_name != "5")
+		fileNewDir(PLAYER_NAME);
 	if (user_Input_player_name == "5")
 		return RETURN_TO_MENUS;
 }
@@ -78,8 +80,8 @@ int MAIN_MENUS() {
 
 	if (user_Input == RETURN_TO_MENUS)
 		MAIN_MENUS();
-	if (user_Input == PLAY_GAME)
-		return PLAY_GAME;
+	//if (user_Input == PLAY_GAME)
+	//	return PLAY_GAME;
 	if (user_Input == BACK_RTURN)
 		return EXIT_GAME;
 }
