@@ -2,6 +2,7 @@
 
 #include <string>
 
+void fo(int x);
 void wo(std::string uselimp);
 void sa(int uselimp);
 void nl(int uselimp);

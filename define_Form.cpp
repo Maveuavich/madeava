@@ -1,5 +1,9 @@
 #include "Include.def.7.h"
 
+void fo(int x) {
+	std::cerr << x;
+}
+
 void wo(std::string uselimp) {
 	std::cerr << uselimp;
 }
@@ -30,7 +34,7 @@ void da(int uselimp) {
 }
 
 void USE_SELE() {
-	nl(5);
+	nl(4);
 	wo("Please select an option");
 	sa(4); ar(3); sa(4);
 }

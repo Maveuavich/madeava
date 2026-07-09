@@ -1,13 +1,33 @@
 #include "Include.def.7.h"
+#include "define_ENEMIES.h"
+
+void play_coordsfor(int x, int y);
 
 void ENEMY_ENCOUNTERS(int x, int y);
 
+void PLAYER_STATS() {
+	int HEALTH{};
+	int BASE_DAMAGE{};
+	int EVASION{};
+	int ARMOR{};
+}
+
+void BATTLE_SCREEN(int HEALTH, int ATTACK) {
+
+}
+
+void ENEMY_ENCOUNTERS(int x, int y) {
+
+	if (x == 4 && y == 6)
+		return gaybolbazor();
+
+}
+
 void PLAY_COORDINATES(int x, int y) {
-	std::cerr << "\n\n\n" << "player coordinates:   x:   " << x << "      y:     " << y;
+	play_coordsfor(x, y);
 
 	std::string play_Input;
 	std::cin >> play_Input;
-	//int x{ 0 }, y{ 0 };
 
 	if (play_Input == "w")
 		++y;
@@ -18,10 +38,6 @@ void PLAY_COORDINATES(int x, int y) {
 	if (play_Input == "d")
 		++x;
 	std::cerr << x << "    " << y;
-	PLAY_COORDINATES(x, y);
+	
 	ENEMY_ENCOUNTERS(x, y);
-}
-
-void ENEMY_ENCOUNTERS(int x, int y) {
-
 }

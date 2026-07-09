@@ -14,6 +14,8 @@ void newgame(std::string PLAYER_NAME) {
     std::ifstream saveFILE{ "\\v.proj\\save files\\" + PLAYER_NAME };
     saveFILE.seekg(1, std::ios::beg);
     std::string infoFILE;
+    std::cin.clear();
+    
     std::getline(saveFILE, infoFILE);
     std::cout << "\n\n\n" << infoFILE << "WHY ISN't THIS WORKING" << "\n\n\n\n";
 }
@@ -24,7 +26,11 @@ void fileNewDir(std::string PLAYER_NAME) {
 
     std::ofstream saveFILE{ "\\v.proj\\save files\\" + PLAYER_NAME };
     
-    saveFILE << "PLAYER NAME:" << "\n\n" << PLAYER_NAME << "\n\n\n" << "PLAYER LEVEL :" << "\n\n" << "0" << "\n\n\n" << "PLAYER COORDINATES :" << "\n\n" << "x 0    y 0" << "\n\n\n" << "COMPANIONS:" << "\n\n\n" << "ITEMS:" <<  "\n\n";
+    //saveFILE << "PLAYER NAME:" << "\n\n" << PLAYER_NAME << "\n\n\n" << "PLAYER LEVEL :" << "\n\n" << "0" << "\n\n\n" << "PLAYER COORDINATES :" << "\n\n" << "x 0    y 0" << "\n\n\n" << "COMPANIONS:" << "\n\n\n" << "ITEMS:" <<  "\n\n";
+    saveFILE << "PLAYER NAME:";
+    saveFILE << PLAYER_NAME;
+    saveFILE << "PLAYER LEVEL:";
+    saveFILE << "0";
 
     newgame(PLAYER_NAME);
     //while (saveFILE >> infoFILE)

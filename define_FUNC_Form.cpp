@@ -1,5 +1,10 @@
 #include "Form.h"
 
+void play_coordsfor(int x, int y) {
+	nl(3); wo("player coodinates:"); sa(3); wo("x:"); sa(3); fo(x); sa(4); wo("y:"); sa(3); fo(y); nl(2); wo("Press W to move up  ::  Press S to move down   ::   Press A to move left   ::   Press D to move right");
+	USE_SELE();
+}
+
 void options_menusfor() {
 	nl(3); al(43); sa(12); wo("OPTIONS MENUS"); sa(12); ar(43); nl(5); sa(41); wo("dafuq kind of settings youz gonna change"); nl(3); sa(55); wo("5. Back");
 	USE_SELE();
