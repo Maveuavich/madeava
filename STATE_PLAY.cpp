@@ -2,24 +2,25 @@
 #include "define_ENEMIES.h"
 
 void play_coordsfor(int x, int y);
+void battle_screenfor();
 
 void ENEMY_ENCOUNTERS(int x, int y);
 
 void PLAYER_STATS() {
-	int HEALTH{};
-	int BASE_DAMAGE{};
+	int HEALTH{100};
+	int BASE_DAMAGE{10};
 	int EVASION{};
 	int ARMOR{};
 }
 
 void BATTLE_SCREEN(int HEALTH, int ATTACK) {
-
+	battle_screenfor();
 }
 
 void ENEMY_ENCOUNTERS(int x, int y) {
 
 	if (x == 4 && y == 6)
-		return gaybolbazor();
+		gaybolbazor();
 
 }
 

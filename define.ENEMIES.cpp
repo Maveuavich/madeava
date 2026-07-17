@@ -1,3 +1,5 @@
+#include <string>
+
 void BATTLE_SCREEN(int HEALTH, int ATTACK);
 
 void dookiekong() {

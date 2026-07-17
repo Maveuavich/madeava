@@ -5,6 +5,10 @@ void play_coordsfor(int x, int y) {
 	USE_SELE();
 }
 
+void battle_screenfor() {
+	nl(3); wo("You encountered a monster. You ran into:"); sa(3);
+}
+
 void options_menusfor() {
 	nl(3); al(43); sa(12); wo("OPTIONS MENUS"); sa(12); ar(43); nl(5); sa(41); wo("dafuq kind of settings youz gonna change"); nl(3); sa(55); wo("5. Back");
 	USE_SELE();
